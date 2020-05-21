@@ -3,7 +3,7 @@
 # Init class of linky Exporter module. It can installes linky Exporter binaries and single Service.
 #
 # @param version
-#  linky exporter release. See https://github.com/anclrii/linky-Exporter/releases
+#  linky exporter release. See https://github.com/syberalexis/linky-exporter/releases
 # @param os
 #  Operating system.
 # @param base_dir

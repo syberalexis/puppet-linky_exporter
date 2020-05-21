@@ -31,7 +31,7 @@ The following parameters are available in the `linky_exporter` class.
 
 Data type: `String`
 
-linky exporter release. See https://github.com/anclrii/linky-Exporter/releases
+linky exporter release. See https://github.com/syberalexis/linky-exporter/releases
 
 Default value: '1.0.0'
 
