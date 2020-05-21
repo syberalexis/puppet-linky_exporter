@@ -15,7 +15,7 @@
 
 ## Description
 
-This module automates the install of [linky Exporter](https://github.com/Kylapaallikko/linky_exporter).  
+This module automates the install of [linky Exporter](https://github.com/syberalexis/linky-exporter).  
 
 ## Usage
 
@@ -30,10 +30,10 @@ include linky_exporter
 
 ## Examples
 
-#### Personal python installation
+#### Change device file
 
 ```yaml
-linky_exporter::manage_python: false
+linky_exporter::serial_device: '/dev/ttyAMA0'
 ```
 
 ## Development

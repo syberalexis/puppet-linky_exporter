@@ -1,0 +1,16 @@
+# THIS FILE IS MANAGED BY PUPPET
+[Unit]
+Description=Linky Exporter service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=<%= @user %>
+Group=<%= @group %>
+Type=simple
+ExecStart=<%= @bin_dir %>/linky-exporter --address <%= @listen_address %> --port <%= @listen_port %> --device <%= @serial_device %> --baud <%= @baud_rate %>
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
