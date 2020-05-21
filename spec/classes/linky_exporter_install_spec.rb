@@ -8,14 +8,14 @@ describe 'linky_exporter::install' do
         os_facts.merge('os' => { 'architecture' => arch })
       end
 
-      case arch
-      when 'aarch64'
-        real_arch = 'arm64'
-      when 'armv6l'
-        real_arch = 'armv6'
-      else
-        real_arch = 'amd64'
-      end
+      real_arch = case arch
+                  when 'aarch64'
+                    'arm64'
+                  when 'armv6l'
+                    'armv6'
+                  else
+                    'amd64'
+                  end
 
       [
         {
@@ -71,7 +71,7 @@ describe 'linky_exporter::install' do
               'extract_command' => s_extract_command,
             )
             is_expected.to contain_file("#{s_base_dir}/linky-exporter-#{s_version}").with(
-              'ensure' => 'directory'
+              'ensure' => 'directory',
             )
             is_expected.to contain_file("#{s_base_dir}/linky-exporter-#{s_version}/linky-exporter-#{s_version}-#{s_os}-#{s_arch}").with(
               'owner'  => 'root',
